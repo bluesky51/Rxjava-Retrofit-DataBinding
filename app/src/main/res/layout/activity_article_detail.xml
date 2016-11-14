@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="url"
+            type="java.lang.String">
+
+        </variable>
+    </data>
+        <RelativeLayout
+            android:id="@+id/activity_article_detail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolBar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"></android.support.v7.widget.Toolbar>
+
+            <WebView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/toolBar"
+                app:webUrl="@{url}"></WebView>
+
+        </RelativeLayout>
+
+</layout>
+

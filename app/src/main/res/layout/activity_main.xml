@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="adapter"
+            type="android.widget.BaseAdapter"></variable>
+
+        <variable
+            name="vpAdapter"
+            type="android.support.v4.app.FragmentPagerAdapter"></variable>
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            >
+
+        </android.support.v7.widget.Toolbar>
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:adapter="@{vpAdapter}"
+            android:layout_below="@id/toolBar">
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabMode="fixed"
+                >
+
+            </android.support.design.widget.TabLayout>
+        </android.support.v4.view.ViewPager>
+
+
+
+
+    </RelativeLayout>
+</layout>
+
